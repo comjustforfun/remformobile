@@ -1,0 +1,352 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="javascript H5自适应框架" />
+    <meta name="Keywords" content="javascript H5自适应框架" />
+    <title id="title">javascript自适应框架</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="js/adaptive-version2.js"></script>
+    <script>
+        window['adaptive'].desinWidth = 640;
+        window['adaptive'].baseFont = 18;
+        window['adaptive'].maxWidth = 480;
+        window['adaptive'].init();
+    </script>
+</head>
+<body>
+    <style>
+        html,
+        body,
+        div,
+        span,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        abbr,
+        address,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        samp,
+        small,
+        strong,
+        sub,
+        sup,
+        var,
+        b,
+        i,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+
+            font-size: 100%;
+            vertical-align: baseline;
+
+            outline: 0;
+            background: transparent;
+        }
+
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td {
+            vertical-align: middle;
+        }
+
+        li {
+            list-style: none outside none;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        :focus {
+            outline: 1;
+        }
+
+        article,
+        aside,
+        canvas,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section,
+        summary {
+            display: block;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        blockquote,
+        q {
+            quotes: none;
+        }
+
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: "";
+            content: none;
+        }
+
+        a {
+            margin: 0;
+            padding: 0;
+            border: 0;
+
+            font-size: 100%;
+            vertical-align: baseline;
+
+            background: transparent;
+        }
+
+        ins {
+            text-decoration: none;
+
+            color: #000;
+            background-color: #ff9;
+        }
+
+        mark {
+            font-weight: bold;
+            font-style: italic;
+
+            color: #000;
+            background-color: #ff9;
+        }
+
+        del {
+            text-decoration: line-through;
+        }
+
+        em {
+            font-style: normal;
+        }
+
+        abbr[title],
+        dfn[title] {
+            border-bottom: 1px dotted #000;
+
+            cursor: help;
+        }
+
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+
+        hr {
+            display: block;
+
+            height: 1px;
+            margin: 1em 0;
+            padding: 0;
+            border: 0;
+            border-top: 1px solid #ccc;
+        }
+
+        input,
+        select {
+            vertical-align: middle;
+        }
+
+        body {
+            font-family: 微软雅黑;
+            color: #666;
+            max-width: 6.4rem;
+            margin: 0 auto;
+        }
+        body * {
+            max-width: 6.4rem;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .red {
+            color: #e94643 !important;
+        }
+
+        .green {
+            color: #4a9500 !important;
+        }
+
+        .gray {
+            color: #a5a5a5 !important;
+        }
+
+
+        h1 {
+            font-size: 0.32rem;
+            line-height: 0.92rem;
+            text-align: center;
+
+            color: #fff;
+            background-color: #e94643;
+        }
+
+        .fund-info {
+            position: relative;
+            font-weight: normal;
+            padding: 0.2rem 0;
+            padding-right: 1.7rem;
+            padding-left: 0.23rem;
+            font-size: 0.32rem;
+            line-height: 1;
+        }
+
+        .fund-info .fund-name {
+            color: #001111;
+        }
+
+        .fund-info .code {
+            font-size: 0.2rem;
+            color: #a5a5a5;
+        }
+
+        .fund-info .type {
+            font-size: 0.2rem;
+            color: #a5a5a5;
+            margin-left: 0.2rem;
+        }
+        .fund-info .tc {
+            top: 0.2rem;
+            position: absolute;
+            right: 0.25rem;
+        }
+        .main-info {
+            height: 0.88rem;
+            padding-bottom: 0.24rem;
+        }
+
+        .navUnit-box {
+            display: table-cell;
+
+            width: 2.13rem;
+            border-right: 1px solid #e3e3e3;
+        }
+
+        .main-info .value {
+            font-size: 0.26rem;
+            line-height: 0.6rem;
+            text-align: center;
+        }
+
+        .main-info .des {
+            font-size: 0.16rem;
+            line-height: 0.28rem;
+            text-align: center;
+        }
+
+        .avgReturnYear-box {
+            display: table-cell;
+
+            width: 2.13rem;
+            border-right: 1px solid #e3e3e3;
+        }
+
+        .infoFirstInvestStyle-box {
+            display: table-cell;
+
+            width: 2.12rem;
+        }
+
+        .infoUnityield-box {
+            display: table-cell;
+
+            width: 3.19rem;
+            border-right: 1px solid #e3e3e3;
+        }
+
+        .infoYearlyroe-box {
+            display: table-cell;
+
+            width: 3.2rem;
+        }
+
+
+    </style>
+    <section id="discriptionCon">
+            <section>
+                <h2 class="fund-info"><span class="fund-name">嘉实活期宝</span>
+                <div class="tc"><span class="code">000464</span><span class="type">货币型</span></div>
+                </h2>
+            </section>
+            <section class="main-info">
+                <div class="infoUnityield-box">
+                    <p class="value red">1.4821</p>
+                    <p class="des gray">每万份收益（2015-06-17）</p>
+                </div>
+                <div class="infoYearlyroe-box">
+                    <p class="value red">4.1080%</p>
+                    <p class="des gray">七日年化收益（2015-06-17）</p>
+                </div>
+            </section>
+    </section>
+</body>
+</html>
